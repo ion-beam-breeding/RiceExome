@@ -1,0 +1,21 @@
+### Uncomment when debugging
+#DEBUG	= -ggdb -pg # -lefence
+
+# common (*.o)
+LD	= /usr/bin/g++
+LDFLAGS	= $(DEBUG)
+LDLIBS	=
+
+# C (*.c)
+CC	= gcc
+CFLAGS	= --std=c++11 -O2 -I. $(DEBUG)
+
+# C++ (*.cpp)
+CXX	 = g++
+CXXFLAGS = --std=c++11 -O2 -I. $(DEBUG)
+INCLUDES =
+
+# etc
+MAKE    = make
+MKDIR	= mkdir
+RM	= rm -f
